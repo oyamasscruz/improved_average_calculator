@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Averages Calculator</title>
+  <link rel="stylesheet" href="assets/styles/main.css">
+  <script src="assets/scripts/vendor.js" defer></script>
+  <script src="assets/scripts/app.js" defer></script>
+</head>
+<body>
+  <div id="backdrop"></div>
+  <div class="modal" id="add-modal">
+    <div class="modal__content">
+      <label for="subject">Please Insert Subject</label>
+      <input type="text" name="subject" id="subject" class="modal__subject"/>
+      <label for="grade">Please Insert your grade</label>
+      <input 
+      type="number"
+      min="0"
+      max="10"
+      step="1" 
+      name="grade"
+      id="grade"
+      />
+    </div>
+    <div class="modal__actions">
+      <button id="btn-cancel">Cancel</button>
+      <button id="btn-insert">Insert</button>
+    </div>
+  </div>
+
+  <header>
+    <img src="https://img.icons8.com/?size=100&id=zBjddwJhT2N3&format=png&color=000000" alt="calculator">
+    <h1>Averages Calculator</h1>
+    <div class="grade-display">
+      <div class="grade-display__inside">
+        <span id="default-grade"></span>
+      </div>
+    </div>
+    <button id="btn-header">Use Calculator</button>
+  </header>
+  
+  <main>
+    <section class="entry-avarages">
+      <p>Your Averages!</p>
+    </section>
+    <ul class="subject-list"></ul>
+  </main>
+</body>
+</html>

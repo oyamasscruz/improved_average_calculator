@@ -1,0 +1,262 @@
+* {
+  box-sizing: border-box;
+}
+
+h1{
+  color: rgb(7, 10, 14);
+}
+
+body {
+  margin: 0;
+}
+
+html {
+  font-family: sans-serif;
+}
+
+#backdrop {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 10;
+  pointer-events: none;
+  display: none;
+}
+
+#backdrop.visible {
+  display: block;
+  pointer-events: all;
+}
+
+label {
+  font-weight: bold;
+  margin: 0.5rem 0;
+  color: #464646;
+}
+
+input {
+  font: inherit;
+  border: 1px solid #ccc;
+  padding: 0.4rem 0.2rem;
+  color: #383838;
+}
+
+input:focus {
+  outline: none;
+  background: #D9D6D1;
+}
+
+.modal {
+  position: fixed;
+  z-index: 100;
+  background: white;
+  border-radius: 10px;
+  width: 40rem;
+  top: 30vh;
+  left: calc(50% - 20rem);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  display: none;
+}
+
+.modal.visible {
+  display: block;
+  animation: fade-slide-in 0.3s ease-out forwards;
+}
+
+.modal .modal__content {
+  padding: 1rem;
+  display: flex;
+  width: 40rem;
+  flex-direction: column;
+}
+
+.modal .modal__subject {
+  margin: 0;
+  color: white;
+}
+
+.modal .modal__actions {
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#btn-insert,
+#btn-cancel {
+  margin: 10px;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+#btn-insert {
+  background-color: #b7c9fa;
+  color: #f1f4fe;
+  font-size: 16px;
+  cursor: pointer;
+  border: 1px solid #f1f4fe;
+}
+
+#btn-insert:hover {
+  background-color: #f1f4fe;
+  color: #418CF1;
+}
+
+#btn-cancel:hover {
+  background-color: #b7c9fa;
+  color: #f1f4fe;
+}
+
+#btn-cancel {
+  background-color: transparent;
+  color: #383838;
+  border: none;
+}
+
+header {
+  width: 100%;
+  height: 10rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2.5rem;
+  background: #D9D6D1;
+}
+
+header img {
+  width: 150px;
+}
+
+.grade-display {
+  width: 100px;
+  height: 100px;
+  background-color: #D9D6D1;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin: 1rem;
+  font-size: 4rem;
+  box-shadow: 0 4px 8px #383838;
+}
+
+.grade-display__inside {
+  background: linear-gradient(145deg, #007bff, #0056b3);
+  border: 3px #D9D6D1 solid;
+  width: 85px;
+  height: 85px;
+  display: flex;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.grade-display__inside::before {
+  content: '';
+  position: absolute;
+  top: 15%;
+  left: 15%;
+  width: 70%;
+  height: 30%;
+  background: #D9d6d1; /* Brilho semi-transparente */
+  border-radius: 50%;
+  transform: rotate(-25deg);
+  filter: blur(10px);
+}
+
+.grade-display span {
+  align-items: center;
+  justify-content: center;
+  color: #383838;
+  font-weight: bold;
+}
+
+#btn-header {
+  background-color: #418CF1;
+  color: #D9D6D1;
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 1px solid #f1f4fe;
+}
+
+#btn-header:focus {
+  outline: 2px solid #418CF1;
+  outline-offset: 4px;
+}
+
+#btn-header:hover {
+  background-color: #D9D6D1;
+  border: 1px solid #418CF1;
+  color: #418CF1;
+}
+
+.subject-list {
+  list-style: none;
+  width: 60rem;
+  max-width: 90%;
+  margin: 1rem auto;
+  display: grid;
+  gap: 1rem;
+  column-gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 0;
+}
+
+.subject-border {
+  background-color:#67717A ;
+  display: flex;
+  max-width: 90%;
+  width: 20rem;
+  flex-direction: column;
+  border-radius: 10px;
+  text-align: center;
+  color: #f1f4fe;
+}
+
+.subject-border h2 {
+  font-size: 1.5rem;
+  padding: 10px;
+  height: 60px;
+}
+
+.subject-list-item {
+  margin: 0.5rem 0.5rem;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  height: 180px;
+}
+
+.subject-list__info {
+  flex: 2;
+  padding: 20px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #383838;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+.subject-result {
+  flex: 1;
+  padding: 20px;
+  color: #383838;
+}
+
+.lecture-list__img {
+  max-width: 60px;
+  width: 100%;
+  max-height: 60px;
+  height: 100%;
+}
+
