@@ -14,14 +14,41 @@
     <div class="modal__content">
       <label for="subject">Please Insert Subject</label>
       <input type="text" name="subject" id="subject" class="modal__subject"/>
-      <label for="grade">Please Insert your grade</label>
+      <label for="first-grade">1º Trimester Grade</label>
       <input 
       type="number"
       min="0"
       max="10"
       step="1" 
-      name="grade"
-      id="grade"
+      name="first-grade"
+      id="first-grade"
+      />
+      <label for="second-grade">2º Trimester Grade</label>
+      <input 
+      type="number"
+      min="0"
+      max="10"
+      step="1" 
+      name="second-grade"
+      id="second-grade"
+      />
+      <label for="third-grade">3º Trimester Grade</label>
+      <input 
+      type="number"
+      min="0"
+      max="10"
+      step="1" 
+      name="third-grade"
+      id="third-grade"
+      />
+      <label for="quarter-grade">4º Trimester Grade</label>
+      <input 
+      type="number"
+      min="0"
+      max="10"
+      step="1" 
+      name="quarter-grade"
+      id="quarter-grade"
       />
     </div>
     <div class="modal__actions">
@@ -42,9 +69,6 @@
   </header>
   
   <main>
-    <section class="entry-avarages">
-      <p>Your Averages!</p>
-    </section>
     <ul class="subject-list"></ul>
   </main>
 </body>

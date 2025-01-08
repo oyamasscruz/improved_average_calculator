@@ -75,7 +75,7 @@ input:focus {
 
 .modal .modal__subject {
   margin: 0;
-  color: white;
+  color: #383838;
 }
 
 .modal .modal__actions {
@@ -162,7 +162,7 @@ header img {
   left: 15%;
   width: 70%;
   height: 30%;
-  background: #D9d6d1; /* Brilho semi-transparente */
+  background: #D9d6d1;
   border-radius: 50%;
   transform: rotate(-25deg);
   filter: blur(10px);
@@ -204,59 +204,115 @@ header img {
   display: grid;
   gap: 1rem;
   column-gap: 20px;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   padding: 0;
 }
 
 .subject-border {
-  background-color:#67717A ;
+  background-color:#67717A;
+  justify-content: space-between;
   display: flex;
   max-width: 90%;
-  width: 20rem;
+  width: 70rem;
   flex-direction: column;
   border-radius: 10px;
   text-align: center;
   color: #f1f4fe;
 }
 
+.card-average {
+  display: flex;
+  justify-content: space-between;
+}
+
 .subject-border h2 {
-  font-size: 1.5rem;
-  padding: 10px;
+  font-size: 2rem;
+  padding: 20px;
   height: 60px;
 }
 
-.subject-list-item {
-  margin: 0.5rem 0.5rem;
-  background-color: white;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-  border-radius: 10px;
+.toggle-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  height: 180px;
+  width: 30px;
+  height: 25px;
+  padding: 0;
+  margin: 50px;
 }
 
-.subject-list__info {
-  flex: 2;
-  padding: 20px;
-  font-size: 2.5rem;
+.toggle-btn span {
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: #f1f4fe;
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.toggle-btn.active span:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+
+.toggle-btn.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.toggle-btn.active span:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+thead {
+  font-size: 1.5rem;
+  color: #007bff;
+  margin-top: 10px;
+}
+
+tbody {
+  font-size: 2rem;
   font-weight: bold;
-  color: #383838;
-  text-align: center;
-  word-wrap: break-word;
+  align-content: center;
+}
+
+.subject-table {
+  background-color: #f1f4fe;
+  margin: 0.5rem 0.5rem;
+  height: 150px;
+  border-radius: 10px;
+  color: #383838; 
+}
+
+.hidden {
+  display: none;
 }
 
 .subject-result {
-  flex: 1;
-  padding: 20px;
-  color: #383838;
+  display: flex;
+  align-items: center;
+  justify-content: space-around; 
+  gap: 1rem;
+  padding-top: 20px;
 }
 
 .lecture-list__img {
-  max-width: 60px;
-  width: 100%;
+  max-width: 60px; 
   max-height: 60px;
-  height: 100%;
+  width: auto;
+  height: auto;
 }
 
+.result-table {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+}
+
+.span-result {
+  font-size: 1rem; 
+  font-weight: bold;
+  color: #383838;
+}
