@@ -14,7 +14,7 @@
     <div class="modal__content">
       <label for="subject">Please Insert Subject</label>
       <input type="text" name="subject" id="subject" class="modal__subject"/>
-      <label for="first-grade">1º Trimester Grade</label>
+      <label for="first-grade">1st Trimester Grade</label>
       <input 
       type="number"
       min="0"
@@ -23,7 +23,7 @@
       name="first-grade"
       id="first-grade"
       />
-      <label for="second-grade">2º Trimester Grade</label>
+      <label for="second-grade">2nd Trimester Grade</label>
       <input 
       type="number"
       min="0"
@@ -32,7 +32,7 @@
       name="second-grade"
       id="second-grade"
       />
-      <label for="third-grade">3º Trimester Grade</label>
+      <label for="third-grade">3rd Trimester Grade</label>
       <input 
       type="number"
       min="0"
@@ -41,7 +41,7 @@
       name="third-grade"
       id="third-grade"
       />
-      <label for="quarter-grade">4º Trimester Grade</label>
+      <label for="quarter-grade">4th Trimester Grade</label>
       <input 
       type="number"
       min="0"
@@ -58,17 +58,22 @@
   </div>
 
   <header>
-    <img src="https://img.icons8.com/?size=100&id=zBjddwJhT2N3&format=png&color=000000" alt="calculator">
     <h1>Averages Calculator</h1>
-    <div class="grade-display">
-      <div class="grade-display__inside">
-        <span id="default-grade"></span>
+    <div class="your-average">
+      <h2>Your Default Average</h2>
+      <div class="grade-display">
+        <div class="grade-display__inside">
+          <span id="default-grade"></span>
+        </div>
       </div>
     </div>
     <button id="btn-header">Use Calculator</button>
   </header>
   
   <main>
+    <section class="entry-averages">
+      <p>Your averages will appear here!!!</p>
+    </section>
     <ul class="subject-list"></ul>
   </main>
 </body>

@@ -4,25 +4,26 @@ let result;
 let setDefaultValue;
 
 function settingDefaultValue() {
-  setDefaultValue = prompt('Please insert your defaul value');
+  setDefaultValue = prompt('Please insert your default value');
 
   if(
     isNaN(setDefaultValue) ||
     !setDefaultValue ||
-    +setDefaultValue < 0
+    +setDefaultValue < 1 ||
     +setDefaultValue > 9
   ) {
-    alert('Please inset valide Default grade (between 1 and 9)')
-    setDefaultValue = prompt('Please insert your defaul value');
-  } else {
-    alert("Let's find out if you're able to proced to next year or not!");
+    alert('Please insert valide a default grade (between 1 and 9)');
+    settingDefaultValue();
+    return;
   }
+  alert("Let's insert your subjects and grades!!!")
+  function defaultGradeHandler() {
+    defaultGrade.textContent = `${parseInt(setDefaultValue.trim())}`;
+  };
+  defaultGradeHandler();
 }
 settingDefaultValue();
 
-function defaultGradeHandler() {
-  defaultGrade.textContent = `${parseInt(setDefaultValue.trim())}`;
-};
 
 const updateUi = () => {
   if (averagesGrades.length === 0) {
@@ -54,7 +55,7 @@ const addNewAverage = () => {
     +inputQuarterGradeValue < 0 ||
     +inputQuarterGradeValue > 10
   ) {
-    alert('Please insert a valid Grades (values between 0 and 10)');
+    alert('Please insert valid grades (values between 0 and 10)');
     return;
   } 
 
@@ -103,10 +104,10 @@ const renderNewAverage = (subject, firstGrade, secondGrade, thirdGrade, quarterG
   <table class="subject-table">
     <thead>
       <tr>
-        <th>1º Trimester</th>
-        <th>2º Trimester</th>
-        <th>3º Trimester</th>
-        <th>4º Trimester</th>
+        <th>1rst Trimester</th>
+        <th>2nd Trimester</th>
+        <th>3rd Trimester</th>
+        <th>4th Trimester</th>
         <th>Final Average</th>
         <th>Result</th>
       </tr>
@@ -165,8 +166,6 @@ const backdropClickHandler = () => {
   toggleBackdrop();
   clearInputs();
 };
-
-defaultGradeHandler();
 
 startBtn.addEventListener('click', showModal);
 backdrop.addEventListener('click', backdropClickHandler);

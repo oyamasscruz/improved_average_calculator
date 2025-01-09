@@ -117,17 +117,42 @@ input:focus {
 }
 
 header {
+  background-image: url("/assets/images/img_calculator_2_1500x600.jpeg");
+  background-position: center;
   width: 100%;
   height: 10rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 2.5rem;
-  background: #D9D6D1;
+  gap: 1rem;
 }
 
-header img {
-  width: 150px;
+header h1 {
+  color: #383838;
+  padding: 10px;
+  box-shadow: 0 0 7px 7px #D9D6D1;
+  border-radius: 10px;
+  background-color: transparent;
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+.your-average {
+  box-shadow: 0 0 7px 7px #383838;
+  border-radius: 10px;
+  height: 6.9rem;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.your-average h2 {
+  color: #383838;
+  border-radius: 5px;
+  background-color: transparent;
+  font-weight: bold;
 }
 
 .grade-display {
@@ -140,6 +165,7 @@ header img {
   display: flex;
   margin: 1rem;
   font-size: 4rem;
+  gap: 1rem;
   box-shadow: 0 4px 8px #383838;
 }
 
@@ -196,6 +222,19 @@ header img {
   color: #418CF1;
 }
 
+.entry-averages {
+  width: 60rem;
+  max-width: 90%;
+  height: 10rem;
+  font-size: 3rem;
+  display: flex;
+  box-shadow: 0 0 7px 7px #383838;
+  margin: 15rem auto;
+  border-radius: 8px;
+  text-align: center;
+  justify-content: center;
+}
+
 .subject-list {
   list-style: none;
   width: 60rem;
@@ -218,6 +257,7 @@ header img {
   border-radius: 10px;
   text-align: center;
   color: #f1f4fe;
+  box-shadow: 0 0 7px 7px #383838;
 }
 
 .card-average {

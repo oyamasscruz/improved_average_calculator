@@ -10,4 +10,5 @@ const inputFirstGrade = document.querySelector('#first-grade');
 const inputSecondGrade = document.querySelector('#second-grade');
 const inputThirdGrade = document.querySelector('#third-grade');
 const inputQuarterGrade = document.querySelector('#quarter-grade');
-const section = document.querySelector('.entry-avarages');
+const section = document.querySelector('.entry-averages');
+const defaultAverage = document.querySelector('.your-average');
